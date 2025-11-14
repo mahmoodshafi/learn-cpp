@@ -2,26 +2,27 @@
 using namespace std;
 
 //it is the function to calculate factorial
-long long factorialIterative(int n) {
+long factorialIterative(int n) {
     if (n < 0) { //agar n negative hai ya 0 se chota hai to
         return -1; 
     }
     if (n == 0 || n == 1) { //agar n 0 ya 1 hai to
         return 1;
     }
-    
-    long long result = 1;
+    long result = 1;
     //agar n 1 se bada hai to loop use karke factorial nikalna hai
     for (int i = 2; i <= n; ++i) {
+        cout << "current value of i: " << i << endl;
         result *= i;
+        cout << "current value of i after calculation: " << i << endl;
     }
     return result;
 }
-int main() {
+int main(){
     int n;
-cout << "Enter a positive integer between 1--20: "; //user se input lena hai
+    cout << "Enter a positive integer between 1--20: "; //user se input lena hai
     cin >> n;
-    long long result = factorialIterative(n);
+    long result = factorialIterative(n);
  
 
     if (result == -1) {
